@@ -8,8 +8,28 @@ using namespace std;
 #define T  ll t ; cin >> t; while(t--)
 int main() {
     fast
-    string s;
-    getline(cin,s);
-    cout<<"Improve my skills";
+    int t;
+    cin>>t;
+    while(t--){
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    bool can=1;
+    // a[n-1]==a[n+1]
+    for(int i=0;i<n-2;i++){
+        if(a[i]%2!=a[i+2]%2){
+            can=0;
+            break;
+        }
+    }
+    if(can){
+        cout<<"YES\n";
+    }else{
+    cout<<"NO\n";
+    }
+    }
 
 }
